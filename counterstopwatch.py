@@ -37,6 +37,13 @@ secentry=Entry(root,width=3,font=("Arial",25,""),textvariable=sec)
 hourentry.place(x=100,y=100)
 minentry.place(x=150,y=100)
 secentry.place(x=200,y=100)
+def disable_button():
+    d["state"]=DISABLED
+
+
 d=Button(root,text="Set your time",bd='5',command=g)
 d.place(x=150,y=200)
+stop= Button(root, text="stop", bd='5', command=disable_button)
+stop.place(x=150, y=250)
+
 root.mainloop()
